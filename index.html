@@ -6,36 +6,51 @@
 <title>Ueberschrift/Titel</title>
 <meta charset="UTF-8"> <!-- ASCII, UTF-8, Windows-nnnn? -->
 <style>
-    #weihnachten1 { color: yellow; background-color: blue }
+    .classblackborder { border:5px solid black }
+    #weihnachten1:hover { color: yellow; background-color: blue }
+    main div:first-child { background-color: green } 
+  /*  main div:last-child  { background-color: green } */
+    main div#lastid:hover { background-color: green }
+    main > div  { color: red }  
+    nav { background-color: grey } 
+    div#cat:hover { border:5px solid black }  
 </style>
+
+ <script src="index.js" type="module"></script>
+ 
 </head>
 
 <body>
 
+<header id="idblackborder" class="classblackborder">	
 <h1>Ampel macht Diesel super-teuer</h1> <!-- h1 - header -->
 <h2>2021-12-08, TL</h2>
 <h3>Politik</h3>
 
 <p>Vor<span id="weihnachten1"> Weihnachten </span> platzt die Bombe, Scholz erhoeht die Preise</p>
 
-
 <p>Diesel kostest bald 3,10 € <br>
 
-Lesen sie mehr auf <a href="https://www.heise.de/newsticker/">kopiert von Heise/newsticker</a><br>
+Lesen sie mehr auf <a href="https://www.heise.de/newsticker/">Heise/newsticker</a><br>
+</header>
 
+<main>	
+ <div>
+ <a href="index1.html">Heise/newsticker</a>
+ </div>
+ <div>
+ <a href="index2.html">Google-Capture</a>
+ </div>
+ <div id="3rdid">
+ Ein div ist einfach eine "Klammer" um andere Dinge
+ </div>
+ <div id="lastid">
+ Abgrenzung ist das Stichwort!!!
+ </div>
 
-<a href="index1.html">kopiert von Heise/newsticker</a>
-</p>
-
-<div>
-Ein div ist einfach eine "Klammer" um andere Dinge
-</div>
-<div>
-Abgrenzung ist das Stichwort!!!
-</div>
-  
+<nav>
 <ul>
-	<li> <a href="index1.html">Politik</a></li> 
+  <li> <a href="index1.html">Politik</a></li> 
   <li> Wirtschaft </li>
   <li> Sport </li>
     <ol start="1"> 
@@ -45,14 +60,23 @@ Abgrenzung ist das Stichwort!!!
   </ol>
   <li> Wetter </li>
  </ul>
+</nav>
 
- <img src="Bilder/cat_pixabay.jpg" width="250" height="150"> <p>Noch Fragen?</br>Dann schreibe eine Nachricht</p>
+</main>
 
- <input type = "text">
+<footer> 
+<div id="cat">
+<img src="Bilder/cat_pixabay.jpg" width="250" height="150">
+</div>
+<p>Noch Fragen?</br>Dann schreibe eine Nachricht</p>
+
+<input type = "text">
 
  <form action="https://www.hsvrm.de">
 	 <button> Weitere Infos</button>
 </form>
+
+</footer>
 
 </body>
 
