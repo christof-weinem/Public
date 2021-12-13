@@ -5,16 +5,59 @@
 
 <title>Ueberschrischt/Titel</title>
 <meta charset="UTF-8"> <!-- ASCII, UTF-8, Windows-nnnn? -->
+<style> 
+ table: { border: solid black; }
+ td { border: thin solid black; background-color:lightblue }
+ th { border: thin solid black; background-color:grey; }
+</style>
 
 </head>
 
 <body>
+ <h1>Politik</h1> <!-- h1 - header -->
+ <h2>2021-12-08, TL</h2>
+ <div> 
+ <input type="checkbox" id="Welt" name="Welt" checked>
+<label for="Welt" >Weltweit</label>
+ </div>
+ <div> 
+ <input type="checkbox" id="Europa" name="Europa" checked>
+ <label for="Europa" >Europa</label>
+ </div>
+ <div>
+ <input type="checkbox" id="Deutschland" name="Deutschland" checked>
+ <label for="Deutschland" >Deutschland</label>
+ </div>
+ <div>
+ <input type="checkbox" id="Bayern" name="Bayern" checked>
+ <label for="Bayern" >Bayern</label>
+ </div>
 
-<h1>Politik</h1> <!-- h1 - header -->
-<h2>2021-12-08, TL</h2>
+ <h1>Themen Politik</h1>
 
-<a href="index.html">Zurück zu Hauptseite</a><br>
+<table>
+    <thead>
+    <tr>
+    <th>Weltweit</th>
+    <th>Deutschland</th>
+    <th>Bayern</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Bush spricht mit Putin</td>
+    <td>Ampel-Regierung steht</td>
+    <td>Söder verschärft Corona-Regeln</td>
+   </tr>
+   <tr>
+     <td>Queen zu Besuch in Berlin</td>
+     <td>Corona: Inzidenz > 400</td>
+     <td>Rekordinzidenzen in der Alpenregion</td>
+   </tr>
+  </tbody>
+</table>
 
+<p> <a href="index.html">Zurück zu Hauptseite</a><br></p>
 
 </body>
 
