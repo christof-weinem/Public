@@ -1,4 +1,3 @@
-
 function faculty( zahl ) 
 {
 	var n = 1; // Zum hochzaehlen
@@ -78,8 +77,63 @@ function output_sqrt() {
 }
 function clearall() {
     document.getElementById("outbox").value = "";
-    console.log("claerall");
+    document.getElementById("resultbox").value = "";
+    document.getElementById("operator").value = "";
+    document.getElementById("linkeroperand").value = "";
+    console.log("clearall");
 }
+function funktion_operand_plus() {
+  var existingvalue = document.getElementById("outbox").value;
+  document.getElementById("linkeroperand").value = existingvalue;
+  document.getElementById("operator").value = "+";
+  document.getElementById("outbox").value = "";
+    console.log("operator");
+}
+function funktion_operand_minus() {
+  var existingvalue = document.getElementById("outbox").value;
+  document.getElementById("linkeroperand").value = existingvalue;
+  document.getElementById("operator").value = "-";
+  document.getElementById("outbox").value = "";
+    console.log("operator");
+}
+function funktion_operand_division() {
+  var existingvalue = document.getElementById("outbox").value;
+  document.getElementById("linkeroperand").value = existingvalue;
+  document.getElementById("operator").value = "/";
+  document.getElementById("outbox").value = "";
+    console.log("operator");
+}
+function funktion_operand_multiplik() {
+  var existingvalue = document.getElementById("outbox").value;
+  document.getElementById("linkeroperand").value = existingvalue;
+  document.getElementById("operator").value = "*";
+  document.getElementById("outbox").value = "";
+    console.log("operator");
+}
+function funktion_result() {
+  var rop = document.getElementById("outbox").value;
+  var lop = document.getElementById("linkeroperand").value;
+  var operator = document.getElementById("operator").value;
+  var result = 0;
+  rop=parseInt(rop);
+  lop=parseInt(lop);
+  result=parseInt(result);
+  switch (operator) {
+    case "+": result = lop + rop;
+    document.getElementById("resultbox").value = result;
+    break;
+    case "-": result = lop - rop;
+    document.getElementById("resultbox").value = result;
+    break;
+    case "/": result = lop / rop;
+    document.getElementById("resultbox").value = result;
+    break;
+    case "*": result = lop * rop;
+    document.getElementById("resultbox").value = result;
+    break;
+  }
+}
+
 document.getElementById("r4-1").addEventListener("click",funktion_ausgabe_1);
 document.getElementById("r4-2").addEventListener("click",funktion_ausgabe_2);
 document.getElementById("r4-3").addEventListener("click",funktion_ausgabe_3);
@@ -94,3 +148,8 @@ document.getElementById("r1-1").addEventListener("click",clearall);
 document.getElementById("Fakultaet").addEventListener("click",ausrechnen);
 document.getElementById("x2").addEventListener("click",output_x2);
 document.getElementById("sqrt").addEventListener("click",output_sqrt);
+document.getElementById("r4-4").addEventListener("click",funktion_operand_plus);
+document.getElementById("r3-4").addEventListener("click",funktion_operand_minus);
+document.getElementById("r1-4").addEventListener("click",funktion_operand_division);
+document.getElementById("r2-4").addEventListener("click",funktion_operand_multiplik);
+document.getElementById("r5-3").addEventListener("click",funktion_result);
