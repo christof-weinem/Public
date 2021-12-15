@@ -9,7 +9,6 @@ function faculty( zahl )
 	}
 	return m;
 }
-
 function ausrechnen() {
 	var eingabe = document.getElementById("outbox").value;
 
@@ -18,41 +17,39 @@ function ausrechnen() {
 }
 //ausrechnen();
 //document.getElementById("Rechner").addEventListener("click",ausrechnen);
-
 function funktion_ausgabe_1() {
   funktion_ausgabe(1);
 }
 function funktion_ausgabe_2() {
     funktion_ausgabe(2);
   }
-  function funktion_ausgabe_3() {
-    funktion_ausgabe(3);
-  }
-  function funktion_ausgabe_4() {
-    funktion_ausgabe(4);
-  }
-  function funktion_ausgabe_5() {
-    funktion_ausgabe(5);
-  }
-  function funktion_ausgabe_6() {
-    funktion_ausgabe(6);
-  }
-  function funktion_ausgabe_7() {
-    funktion_ausgabe(7);
-  }
-  function funktion_ausgabe_8() {
-    funktion_ausgabe(8);
-  }
-  function funktion_ausgabe_9() {
-    funktion_ausgabe(9);
-  }
-  function funktion_ausgabe_0() {
-    funktion_ausgabe(0);
-  }
-
+function funktion_ausgabe_3() {
+  funktion_ausgabe(3);
+}
+function funktion_ausgabe_4() {
+  funktion_ausgabe(4);
+}
+function funktion_ausgabe_5() {
+  funktion_ausgabe(5);
+}
+function funktion_ausgabe_6() {
+  funktion_ausgabe(6);
+}
+function funktion_ausgabe_7() {
+  funktion_ausgabe(7);
+}
+function funktion_ausgabe_8() {
+  funktion_ausgabe(8);
+}
+function funktion_ausgabe_9() {
+  funktion_ausgabe(9);
+}
+function funktion_ausgabe_0() {
+  funktion_ausgabe(0);
+}
 function funktion_ausgabe(number) {
 	var existingvalue = document.getElementById("outbox").value;
-    existingvalue = existingvalue + number;
+  existingvalue = existingvalue + number;
 	document.getElementById("outbox").value = existingvalue;
 }
 function x2(m) {
@@ -87,28 +84,28 @@ function funktion_operand_plus() {
   document.getElementById("linkeroperand").value = existingvalue;
   document.getElementById("operator").value = "+";
   document.getElementById("outbox").value = "";
-    console.log("operator");
+  console.log("operator");
 }
 function funktion_operand_minus() {
   var existingvalue = document.getElementById("outbox").value;
   document.getElementById("linkeroperand").value = existingvalue;
   document.getElementById("operator").value = "-";
   document.getElementById("outbox").value = "";
-    console.log("operator");
+  console.log("operator");
 }
 function funktion_operand_division() {
   var existingvalue = document.getElementById("outbox").value;
   document.getElementById("linkeroperand").value = existingvalue;
   document.getElementById("operator").value = "/";
   document.getElementById("outbox").value = "";
-    console.log("operator");
+  console.log("operator");
 }
 function funktion_operand_multiplik() {
   var existingvalue = document.getElementById("outbox").value;
   document.getElementById("linkeroperand").value = existingvalue;
   document.getElementById("operator").value = "*";
   document.getElementById("outbox").value = "";
-    console.log("operator");
+  console.log("operator");
 }
 function funktion_result() {
   var rop = document.getElementById("outbox").value;
@@ -120,20 +117,19 @@ function funktion_result() {
   result=parseInt(result);
   switch (operator) {
     case "+": result = lop + rop;
-    document.getElementById("resultbox").value = result;
-    break;
+              document.getElementById("resultbox").value = result;
+              break;
     case "-": result = lop - rop;
-    document.getElementById("resultbox").value = result;
-    break;
+              document.getElementById("resultbox").value = result;
+              break;
     case "/": result = lop / rop;
-    document.getElementById("resultbox").value = result;
-    break;
+              document.getElementById("resultbox").value = result;
+              break;
     case "*": result = lop * rop;
-    document.getElementById("resultbox").value = result;
-    break;
+              document.getElementById("resultbox").value = result;
+              break;
   }
 }
-
 document.getElementById("r4-1").addEventListener("click",funktion_ausgabe_1);
 document.getElementById("r4-2").addEventListener("click",funktion_ausgabe_2);
 document.getElementById("r4-3").addEventListener("click",funktion_ausgabe_3);
