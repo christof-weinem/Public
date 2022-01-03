@@ -47,6 +47,9 @@ function funktion_ausgabe_9() {
 function funktion_ausgabe_0() {
   funktion_ausgabe(0);
 }
+function funktion_ausgabe_point() {
+  funktion_ausgabe(".");
+}
 function funktion_ausgabe(number) {
 	var existingvalue = document.getElementById("outbox").value;
   existingvalue = existingvalue + number;
@@ -72,6 +75,11 @@ function output_sqrt() {
     var ausgabe = sqrt(existingvalue);
     document.getElementById("resultbox").value = ausgabe;
 }
+function output_percentage() {
+  var existingvalue = document.getElementById("outbox").value;
+  var ausgabe = existingvalue/100;
+  document.getElementById("resultbox").value = ausgabe;
+}
 function clearall() {
     document.getElementById("outbox").value = "";
     document.getElementById("resultbox").value = "";
@@ -80,41 +88,32 @@ function clearall() {
     console.log("clearall");
 }
 function funktion_operand_plus() {
-  var existingvalue = document.getElementById("outbox").value;
-  document.getElementById("linkeroperand").value = existingvalue;
-  document.getElementById("operator").value = "+";
-  document.getElementById("outbox").value = "";
-  console.log("operator");
+    funktion_operand("+")
 }
 function funktion_operand_minus() {
-  var existingvalue = document.getElementById("outbox").value;
-  document.getElementById("linkeroperand").value = existingvalue;
-  document.getElementById("operator").value = "-";
-  document.getElementById("outbox").value = "";
-  console.log("operator");
+  funktion_operand("-")
 }
 function funktion_operand_division() {
-  var existingvalue = document.getElementById("outbox").value;
-  document.getElementById("linkeroperand").value = existingvalue;
-  document.getElementById("operator").value = "/";
-  document.getElementById("outbox").value = "";
-  console.log("operator");
+  funktion_operand("/")
 }
 function funktion_operand_multiplik() {
+  funktion_operand("*")
+}
+function funktion_operand(ground_operator)  {
   var existingvalue = document.getElementById("outbox").value;
   document.getElementById("linkeroperand").value = existingvalue;
-  document.getElementById("operator").value = "*";
+  document.getElementById("operator").value = ground_operator;
   document.getElementById("outbox").value = "";
-  console.log("operator");
+  console.log("operator: "+ground_operator);
 }
 function funktion_result() {
   var rop = document.getElementById("outbox").value;
   var lop = document.getElementById("linkeroperand").value;
   var operator = document.getElementById("operator").value;
   var result = 0;
-  rop=parseInt(rop);
-  lop=parseInt(lop);
-  result=parseInt(result);
+  rop=parseFloat(rop);
+  lop=parseFloat(lop);
+  result=parseFloat(result);
   switch (operator) {
     case "+": result = lop + rop;
               document.getElementById("resultbox").value = result;
@@ -140,12 +139,14 @@ document.getElementById("r2-1").addEventListener("click",funktion_ausgabe_7);
 document.getElementById("r2-2").addEventListener("click",funktion_ausgabe_8);
 document.getElementById("r2-3").addEventListener("click",funktion_ausgabe_9);
 document.getElementById("r5-1").addEventListener("click",funktion_ausgabe_0);
+document.getElementById("r5-2").addEventListener("click",funktion_ausgabe_point);
 document.getElementById("r1-1").addEventListener("click",clearall);
+document.getElementById("Prozent").addEventListener("click",output_percentage);
 document.getElementById("Fakultaet").addEventListener("click",ausrechnen);
 document.getElementById("x2").addEventListener("click",output_x2);
 document.getElementById("sqrt").addEventListener("click",output_sqrt);
-document.getElementById("r4-4").addEventListener("click",funktion_operand_plus);
-document.getElementById("r3-4").addEventListener("click",funktion_operand_minus);
-document.getElementById("r1-4").addEventListener("click",funktion_operand_division);
-document.getElementById("r2-4").addEventListener("click",funktion_operand_multiplik);
+document.getElementById("r5-4").addEventListener("click",funktion_operand_plus);
+document.getElementById("r4-4").addEventListener("click",funktion_operand_minus);
+document.getElementById("r2-4").addEventListener("click",funktion_operand_division);
+document.getElementById("r3-4").addEventListener("click",funktion_operand_multiplik);
 document.getElementById("r5-3").addEventListener("click",funktion_result);
