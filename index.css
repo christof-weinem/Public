@@ -1,0 +1,8 @@
+    .classblackborder { border:5px solid black }
+    #weihnachten1:hover { color: yellow; background-color: blue }
+    main div:first-child { background-color: green } 
+    /*  main div:last-child  { background-color: green } */
+    main div#lastid:hover { background-color: green }
+    main > div  { color: red }  
+    nav { background-color: grey } 
+    div#cat:hover { border:5px solid black }  
